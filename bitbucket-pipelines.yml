@@ -1,0 +1,39 @@
+image: node:16.13-alpine
+
+pipelines:
+  default:
+    - step:
+        name: Build and test
+        image: node:16.13-alpine
+        caches:
+          - node
+        script:
+          - npm install 
+          - npm config ls
+        # artifacts:
+        #  - build/**
+    - step:
+            trigger: manual # uncomment to have a manual step
+            name: Deploy to VPS
+            deployment: staging
+            script:
+            - echo "Deploying to staging environment"
+            - pipe: atlassian/ssh-run:0.2.2
+              variables:
+                SSH_USER: $SSH_USER # Replace with your EC2 SSH user
+                SERVER: $HOSTINGER_VPS_IP # Replace with your EC2 instance IP or DNS
+                SSH_KEY: $SSH_PRIVATE_KEY
+                SSH_PASSWORD: $SSH_PASSWORD
+                # REMOTE_PATH: 
+                # LOCAL_PATH: 
+                COMMAND: |
+                  echo "Deploy script started"
+                  cd /home/blguidev/htdocs/blgdev-ui.wgtechnologiespvtltd.com/
+                  git pull
+                  docker-compose down -v
+                  docker-compose up --build -d
+                  echo "Deploy script finished execution"
+definitions:
+  services:
+    docker:
+      memory: 1024  # Adjust based on your Docker Compose requirements

@@ -1,0 +1,18 @@
+/*
+ * footer css File
+*/
+
+.footer {
+    background: #2F2E2E;
+    padding: 30px 0 30px;
+    color:#fff;
+}
+
+.copyright {font-size: 14px;}
+
+
+.social {list-style: none; padding-left: 0;}
+.social li a {color:#fff;}
+
+.address {font-weight: 600; font-size: 16px;}
+.address a {color:#fff; text-decoration: underline}

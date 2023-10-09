@@ -1,0 +1,88 @@
+/*
+ * NavItem css File
+*/
+
+/* .navbar-expand-lg .navbar-nav .nav-item {
+    border-right: 1px solid rgba(0, 138, 252, 1);
+} */
+
+.navbar-expand-lg .navbar-nav .nav-item:last-child {
+    border: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 0 10px;
+    line-height: 50px;
+    text-transform: uppercase
+}
+
+.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link,
+.navbar-expand-lg .navbar-nav .nav-item:focus .nav-link,
+.navbar-expand-lg .navbar-nav .nav-item:active .nav-link {
+    color: rgb(192, 192, 192)
+}
+
+
+.trial_button_nav {
+    display: block;
+    transition: all 0.2s ease, visibility 0s;
+    border-radius: 50px;
+    box-shadow: 1.41px 1.41px 4px rgba(0, 0, 0, 0.15);
+    /* background: repeat padding-box border-box 0% 0%/auto auto scroll linear-gradient(180deg, rgba(255, 253, 244, 0.75) 0%, rgba(255, 253, 244, 0.75) 100%), repeat padding-box border-box 50% 9%/50% scroll url("../../../../images/free-trial-bg.png"), #FFFDF4; */
+    width: 200px;
+    height: 35px;
+    line-height: 35px !important;
+    color: #000 !important;
+    transition: transform 250ms ease-in-out;
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    -ms-transition: transform 250ms ease-in-out;
+    -o-transition: transform 250ms ease-in-out;
+    text-align: center;
+}
+
+.trial_button_nav:hover {
+    transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    text-decoration: none;
+    color: #000;
+}
+
+
+@media screen and (max-width:1270px) and (min-width:992px) {
+    .trial_button_nav {width: 175px;}
+    .navbar-expand-lg .navbar-nav .nav-link {padding: 0 8px; font-size: 12px}
+}
+
+
+@media screen and (max-width:991px) {
+    .navbar-expand-lg .navbar-nav .nav-item {
+        border-right: none;
+        border-bottom: 1px solid #c9c7c7;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 4px 0px;
+    }
+
+    .btn-group {
+        margin: 5px 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    .trial_button_nav {margin: 15px auto; line-height: 28px !important;}
+    .navbar-nav.social {flex-direction: row; justify-content: center;}
+    .navbar-nav.social li {border: none !important}
+
+
+
+}
