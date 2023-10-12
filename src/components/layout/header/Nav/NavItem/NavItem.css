@@ -1,88 +1,213 @@
-/*
- * NavItem css File
-*/
+/***************Header Start*************************/
 
-/* .navbar-expand-lg .navbar-nav .nav-item {
-    border-right: 1px solid rgba(0, 138, 252, 1);
-} */
-
-.navbar-expand-lg .navbar-nav .nav-item:last-child {
-    border: none;
+.upcoming_events_listing li{
+    list-style: none;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    padding: 0 10px;
+
+.upcoming_events_listing li a{
+    display: inline-block;
+    overflow: hidden;
+    height: 50px;
+    border-radius: 5px;
     line-height: 50px;
-    text-transform: uppercase
+    padding: 0 10px;
+    text-decoration: none;
 }
 
-.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link,
-.navbar-expand-lg .navbar-nav .nav-item:focus .nav-link,
-.navbar-expand-lg .navbar-nav .nav-item:active .nav-link {
-    color: rgb(192, 192, 192)
+.upcoming_events_menu ul li a{
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    z-index: 2;
+    text-transform: uppercase;
+    transition:all 0.3s ease-in-out;
 }
 
 
-.trial_button_nav {
+
+.upcoming_events_menu ul li a img{
+    /* margin-right: 10px; */
+    filter: invert(100%);
+}
+.upcoming_events_menu ul li a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.upcoming_events_menu ul li a:hover img {filter: none;}
+
+
+.upcoming_events_listing li.up_events{
+    position: relative;
+    padding-right: 30px;
+}
+
+.upcoming_events_listing li{
+    margin-right: 20px;
+}
+.upcoming_events_menu, .upcoming_events_menu ul{
+    display: flex;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+.upcoming_events_listing li {
+    display: flex;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+
+.upcoming_events_listing li.up_events a:before{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, #8f14f7, #211cf9);
+    height: 50px;
+    width: 100%;
+    right: 100%;
+    top:0px;
+    z-index: -1;
+    transition:all 0.3s ease-in-out;
+}
+.upcoming_events_listing li.up_events a:hover:before{
+    right:0;
+}
+.up_events img{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.menu{
+    padding-left: 40px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+.login_link{
+    padding-right: 20px;
+}
+.login_link.up_events{
+    margin-right: 0px;
+}
+
+
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #8f14f7, #211cf9);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay a {
+    color: #818181;
     display: block;
-    transition: all 0.2s ease, visibility 0s;
-    border-radius: 50px;
-    box-shadow: 1.41px 1.41px 4px rgba(0, 0, 0, 0.15);
-    /* background: repeat padding-box border-box 0% 0%/auto auto scroll linear-gradient(180deg, rgba(255, 253, 244, 0.75) 0%, rgba(255, 253, 244, 0.75) 100%), repeat padding-box border-box 50% 9%/50% scroll url("../../../../images/free-trial-bg.png"), #FFFDF4; */
-    width: 200px;
-    height: 35px;
-    line-height: 35px !important;
-    color: #000 !important;
-    transition: transform 250ms ease-in-out;
-    -webkit-transition: transform 250ms ease-in-out;
-    -moz-transition: transform 250ms ease-in-out;
-    -ms-transition: transform 250ms ease-in-out;
-    -o-transition: transform 250ms ease-in-out;
+    padding: 8px;
+    font-size: 36px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .overlay-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow-y: auto;
+  }
+  
+  .overlay-content {
+    padding: 50px;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    color: white;
+    cursor: pointer;
+    display: block;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+    background: #9f9f9f;
+    transition: 0.3s;
+  }
+  .closebtn:focus {
+    outline: 0;
+  }
+
+
+  .menu button{
+    background: none;
+    border: 0px;
+    color: #000;
+  }
+
+  .menu button img {
+    filter: invert(100%);
+  }
+
+
+.overlay-content ul li a{
+    color: #fff;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay-wrapper .overlay-content ul{
+    display: block;
+}
+.overlay-content ul{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.overlay-wrapper .overlay-content ul li ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
+.overlay-wrapper .overlay-content ul li{
+    list-style-type: none;
+    margin-bottom:10px;
+}
+.overlay-wrapper .overlay-content ul li ul li a{
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+    transition: all 0.3s ease-in-out;
+}
 
-.trial_button_nav:hover {
-    transform: scale(1.08);
-    -webkit-transform: scale(1.08);
-    -moz-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    -o-transform: scale(1.08);
-    text-decoration: none;
-    color: #000;
+.upcoming_evnt{
+    display: none;
 }
 
 
-@media screen and (max-width:1270px) and (min-width:992px) {
-    .trial_button_nav {width: 175px;}
-    .navbar-expand-lg .navbar-nav .nav-link {padding: 0 8px; font-size: 12px}
+.overlay-content ul li a:hover{
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
 }
 
 
-@media screen and (max-width:991px) {
-    .navbar-expand-lg .navbar-nav .nav-item {
-        border-right: none;
-        border-bottom: 1px solid #c9c7c7;
-    }
-
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding: 4px 0px;
-    }
-
-    .btn-group {
-        margin: 5px 0;
-        justify-content: center;
-        width: 100%;
-    }
-
-
-    .trial_button_nav {margin: 15px auto; line-height: 28px !important;}
-    .navbar-nav.social {flex-direction: row; justify-content: center;}
-    .navbar-nav.social li {border: none !important}
-
-
-
+.overlay-content ul li:hover ul li a{
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
 }
+
+/***************Header End*************************/

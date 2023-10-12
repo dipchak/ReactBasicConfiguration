@@ -2,39 +2,20 @@
  * header css File
 */
 
-.header {
-    background: #fff;
-    padding-top: 66px;
+.header{
+    /* position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 9; */
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding: 10px 0;
 }
 
-.header .bg-light {
-    background-color: #fff !important;
+.inner_header{
+    padding:0 50px;
 }
-
-
-.site_presented {
-    font-size: 14px;
-}
-
-.navbar-brand {
-    min-width: 190px;
-    text-align: center;
-}
-
-.navbar-brand img {
-    max-width: 120px;
-}
-
-.navbar {
-    align-items: flex-end;
-}
-
-.navbar.bg-dark {
-    background-color: #2F2E2E !important;
-}
-
-@media screen and (max-width:767px) {
-    .header_top_section {
-        justify-content: center !important
-    }
+.header_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

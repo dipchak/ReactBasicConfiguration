@@ -2,17 +2,113 @@
  * footer css File
 */
 
-.footer {
-    background: #2F2E2E;
-    padding: 30px 0 30px;
-    color:#fff;
+/**********Footer Start***************/
+
+.footer{
+    background:url(../../../images/footer_bg.png) no-repeat;
+    padding: 70px 0 0px 0;
+    background-size: cover;
+    background-position: center top;
+}
+.footer_left_partts{
+    text-align: left;
 }
 
-.copyright {font-size: 14px;}
+.footer_social_iconss ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 38px;
+}
+.footer_social_iconss ul li{
+    list-style-type: none;
+    padding: 0 12px;
+}
+
+.footer_social_iconss ul li a{
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_social_iconss ul li a i{
+    color: #fff;
+}
+
+.menu_footer_sec h2{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Syne';
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.menu_footer_sec{}
+.menu_footer_sec ul li{
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+    text-align: left;
+    
+}
+
+.menu_footer_sec ul li:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 2px;
+    background: #fff;
+}
+.menu_footer_sec ul{
+    padding-left: 0px;
+    margin-bottom: 0px;
+    column-count: 2;
+}
+.menu_footer_sec ul li a{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer_top{
+    border-bottom: 1px solid #6e6c71;
+}
 
 
-.social {list-style: none; padding-left: 0;}
-.social li a {color:#fff;}
+.footer_inner_bottom{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_right_ul ul li a{
+    color: #fff;
+    font-size: 16px;
+}
 
-.address {font-weight: 600; font-size: 16px;}
-.address a {color:#fff; text-decoration: underline}
+.footer_right_ul ul li{
+    padding: 0 9px;
+    list-style: none;
+}
+.footer_right_ul ul{
+    display: flex;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.footer_inner_bottom p{
+    margin-bottom: 0px;
+    color: #fff;
+    font-size: 16px;
+}
+/**********Footer End***************/

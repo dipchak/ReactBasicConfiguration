@@ -1,0 +1,175 @@
+.PurchaseLeftPanel{
+    background:linear-gradient(179.97deg, #E5E4FF 0.03%, #FFFFFF 92.1%);
+    text-align: left;
+    position:relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.h4_heading {
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 39px;
+    letter-spacing: 0em;
+}
+
+.PurchaseLeftPanel .plan_point_list li:before {
+    color:#4224FF;
+}
+
+.PurchaseLeftPanel  .plan_point_list {
+    max-height:10em;
+    max-height:15em;
+    overflow-y: scroll;
+}
+
+/* width */
+.PurchaseLeftPanel  .plan_point_list::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+.PurchaseLeftPanel  .plan_point_list::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.22);
+}
+
+/* Handle */
+.PurchaseLeftPanel  .plan_point_list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #0029FF 19.49%, #9B1DFF 108.9%);
+
+}
+.PurchaseLeftPanel  .plan_point_list::-webkit-scrollbar-thumb:hover {
+
+background: linear-gradient(180deg, #9B1DFF 19.49%, #0029FF 108.9%);
+}
+
+.left_small_heading {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000B2;
+}
+
+.right_small_heading {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.apply_coupon {position: relative;}
+.apply_coupon button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    color: #4224FF;
+    text-transform: uppercase;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.apply_coupon button:hover, .apply_coupon button:focus, .apply_coupon button:target, .apply_coupon button:active, .apply_coupon button:visited {
+    background: transparent !important;
+    color: #4224FF !important;
+}
+
+
+.step_number {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to bottom, #9A1DFF, #0E28FF) border-box;
+    border-radius: 50em;
+    border: 3px solid transparent;
+      
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    font-family: Poppins;
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #4224FF;
+}
+
+.step_small_title {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:rgba(0,0,0,.50)
+}
+
+
+.payment_process {border: none;}
+.payment_process li {
+ flex: 1 1 auto;
+ border: none;
+}
+
+.payment_process li a { border: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.payment_process li:first-child:before{
+    background-color: transparent;
+}
+
+.payment_process li:last-child:after {
+    background-color: transparent;
+}
+
+.payment_process li:after {
+    background-color: rgb(194, 188, 178);
+    content: "";
+    display: inline-block;
+    height: 0.25rem;
+    position: relative;
+    vertical-align: middle;
+    width: 5rem;
+    align-items: center;
+
+    flex: 1 1 auto;
+    top: 30px;
+    /* transform: translateY(-20px); */
+  }
+
+  .payment_process li:before {
+    background-color: rgb(194, 188, 178);
+    content: "";
+    display: inline-block;
+    height: 0.25rem;
+    position: relative;
+    vertical-align: middle;
+    width: 5rem;
+    align-items: center;
+
+    flex: 1 1 auto;
+    top: 30px;
+    /* transform: translateY(-50%); */
+  }  

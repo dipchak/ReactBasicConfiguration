@@ -11,8 +11,9 @@ import Toaster from './helper/Toaster';
 import Layout from './components/layout/layout.js';
 
 import HomePage from './pages/home/home';
-
-
+import Signinpage from './pages/signInUp/signIn.jsx';
+import MembershipPlan from './pages/membershipPlans/Membership.plan';
+import PurchasePanel from './pages/MembershipPlanPurchase/PurchasePanel';
 
 
 function RouteWrapper(component) {
@@ -46,6 +47,10 @@ function App() {
     <div className="App"> 
         <Routes>
           <Route path="/" element={RouteWrapper(  <HomePage/>  )} /> 
+          <Route path="/membership" element={RouteWrapper(  <MembershipPlan/>  )} />
+          <Route path="/signin" element={RouteWrapper(  <Signinpage/>  )} />
+          <Route path="/Purchasepanel" element={RouteWrapper(  <PurchasePanel/>  )} />
+
         </Routes>
     </div>
   );

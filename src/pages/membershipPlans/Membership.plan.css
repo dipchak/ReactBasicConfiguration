@@ -1,0 +1,178 @@
+
+.rts___tabs {
+    display: flex;
+    overflow: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+}
+
+.rts___tab {
+
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+
+
+font-family: Poppins;
+font-size: 22px;
+font-weight: 400;
+line-height: 56px;
+letter-spacing: 0em;
+text-align: left;
+border: none;
+background: none;
+padding: 0 15px;
+}
+
+.rts___tab___selected {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+}
+
+.rts___tab___selected:after{
+    content: "";
+    width: 100%;
+    height:6px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #9B1DFF 19%, #0029FF 131.37%);
+
+
+}
+
+
+.rts___tabs___container {
+    display: flex;
+    overflow: auto;
+}
+
+.rts___nav___btn___container {
+    display: flex;
+}
+
+.rts___btn {
+    border: none;
+    background: transparent;
+}
+.rts___svg___icon {
+    stroke: #0009;
+}
+.rts button:disabled.rts___btn svg, .rts___nav___btn:disabled svg, button[disabled].rts___btn svg {
+    stroke: #ddd;
+}
+
+
+
+
+
+.plan_box{
+border-radius: 20px;
+border: 1px solid rgba(0, 0, 0, 0.20);
+background:linear-gradient(179.97deg, #E5E4FF 0.03%, #FFFFFF 92.1%);
+text-align: left;
+
+position:relative;
+z-index: 1;
+overflow: hidden;
+
+}
+
+.plan_box::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.5s linear;
+        opacity: 0;
+        background-image: linear-gradient(199.08deg, #9B1DFF 13.49%, #0029FF 105.38%);
+}
+
+
+.plan_box:hover:before, .plan_box.active:before {
+    opacity: 1;
+}
+
+.plan_box strong {font-family: Poppins;
+font-size: 22px;
+font-weight: 500;
+line-height: 35px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 30px;
+}
+
+.amt{
+    font-family: Poppins;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.amt span{ 
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:rgba(0,0,0,0.60)
+}
+
+.plan_point_list {list-style: none; padding-left:0 ;}
+.plan_point_list li {
+    display: flex;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan_point_list li:before {
+    content: '✓';
+  }
+
+
+.plan_point_list li span.point_head { flex:0 0 35%;}
+.plan_point_list li span.point_desc { flex:0 0 58%;}
+
+.plan_box:hover .plan_point_list li, .plan_box.active .plan_point_list li,
+.plan_box:hover strong, .plan_box.active strong,
+.plan_box:hover .amt, .plan_box.active .amt,
+.plan_box:hover .amt span, .plan_box.active .amt span
+{
+    color: #fff;
+}
+
+.plan_box:hover hr, .plan_box.active hr {
+    border-color: #fff;
+    opacity: 1;
+}
+
+.plan_box:hover .bgl_button {
+    background:#fff ;
+    color: #3625FF;
+}
+
+p{
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+}

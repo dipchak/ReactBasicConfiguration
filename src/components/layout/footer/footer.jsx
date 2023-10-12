@@ -1,42 +1,90 @@
 import React from 'react'
 
 import './footer.css';
-// import maxlinefooter from '../images/maxline-footer.png';
-// import workdmap from '../images/world_map_footer.png';
-//import { Container, Row, Col } from 'bootstrap-4-react';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
-// import Facebook from '../../images/facebook.png';
-// import Linkedin from '../../images/linkedin.png';
+import footerlogo from '../../../images/footer_logo.png';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faPenNib } from '@fortawesome/free-solid-svg-icons'
+//import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
 
 function footer() {
   return (
-    <div className="footer">        
-    <div className="copyright pt-3">
-      <Container>
-        <Row>
-          <Col md="4"></Col>
-          {/* <Col md="4" className="text-center d-flex flex-column align-items-center">
-            <ul className="social d-flex justify-content-center">
-              <li className="mr-2"><a href="https://www.facebook.com/tripvaletincentives" target='blank'  className="facebook"><img src={Facebook} className="img-fluid"/></a></li>
-              <li className="ml-2"><a href="https://www.instagram.com/accounts/login"  target='blank'  className="instagram"><img src={Linkedin} className="img-fluid"/></a></li>
-            </ul>                                
-          
-            &copy; 2021 TRIPVALET INCENTIVES</Col> */}
-          <Col md="4" className="address text-left">
-              4901 W 136th Suite #17<br/>Leawood, KS  66224 <br/>
-              <a href="mailto:support@tripvaletincentives.com" target="_self">support@tripvaletincentives.com</a><br/>
-              Tel:  800-816-2467
-          </Col>
-        </Row>
-      </Container></div>
-  </div>
+
+<footer className="footer">
+        <div className="footer_top">
+            <Container>
+                <Row>
+                    <Col lg={5}>
+                        <div className="footer_left_partts">
+                            <div className="footer_logo">
+                                <img src={footerlogo}/>
+                            </div>
+                            <div className="footer_social_iconss">
+                                <ul>
+
+                                   
+
+                                    <li><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon={faXTwitter} /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon={faYoutube} /></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={7}>
+                        <div className="menu_footer_sec">
+                            <h2>Menu</h2>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Business Growth Services</a></li>
+                                <li><a href="#">Business Live Global Media</a></li>
+                                <li><a href="#">Testimonials</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+
+        <div className="footer_bottom">
+            <Container>
+                <div className="footer_inner_bottom">
+                    <p>&copy; Copyright @2023. All Rights Reserved.</p>
+                    <div className="footer_right_ul">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </Container>
+        </div>
+    </footer>
+
+
+
+
+
+
+
   )
 }
 
